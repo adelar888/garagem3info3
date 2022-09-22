@@ -1,9 +1,7 @@
-from django.shortcuts import render
-
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Categoria, Marca, Carro
-from core.serializers import CategoriaSerializer, MarcaSerializer, CarroSerializer
+from core.models import Categoria, Marca, Veiculo
+from core.serializers import CategoriaSerializer, MarcaSerializer, VeiculoSerializer
 
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
@@ -13,6 +11,6 @@ class MarcaViewSet(ModelViewSet):
     queryset = Marca.objects.all()
     serializer_class = MarcaSerializer
 
-class CarroViewSet(ModelViewSet):
-    queryset = Carro.objects.all()
-    serializer_class = CarroSerializer
+class VeiculoViewSet(ModelViewSet):
+    queryset = Veiculo.objects.all()
+    serializer_class = VeiculoSerializer

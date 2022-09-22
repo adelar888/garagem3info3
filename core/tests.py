@@ -1,15 +1,3 @@
-from django.db import models
+from django.test import TestCase
 
-
-class Marca(models.Model):
-    nome = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.nome
-
-
-class Categoria(models.Model):
-    descricao = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.descricao
+# Create your tests here.
